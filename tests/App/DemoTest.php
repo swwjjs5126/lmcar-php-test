@@ -22,6 +22,7 @@ class DemoTest extends TestCase
             new HttpRequest()
         );
         $ret = $demo->get_user_info();
+        $this->assertNotNull(ret);
         $this->assertArrayHasKey($ret, 'id');
         $this->assertArrayHasKey($ret, 'username');
     }
